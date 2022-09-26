@@ -1,7 +1,7 @@
 def array_split(array, subdivisions)
   # Protects against division-by-zero and negative values
   raise ArgumentError, "subdivisions must be greater than 0" if subdivisions <= 0
-  # Protects against division-by-zero and negative values
+  # Protects against weird behaviour
   raise ArgumentError, "subdivisions must be less or equal to array length" if subdivisions > array.length
 
   chunk_size = (array.length.to_f / subdivisions.to_f).ceil # caculates chunk sizes
